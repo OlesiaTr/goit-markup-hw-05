@@ -77,6 +77,7 @@ body {
 
 .link.not-current {
   position: relative;
+  overflow: hidden;
 }
 
 .link.not-current::after {
@@ -690,11 +691,12 @@ body {
   background: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms var(--main-timing-function);
+  transition: opacity 250ms var(--main-timing-function),
+    visibility 250ms var(--main-timing-function);
 }
 
 .backdrop.is-hidden {
-  /* visibility: hidden; */
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -735,8 +737,8 @@ body {
   background: transparent;
 }
 
-/* .modal-icon {
+.modal-icon {
   stroke-width: 1px;
   stroke: rgba(0, 0, 0, 0.1);
   fill: currentColor;
-} */
+}
